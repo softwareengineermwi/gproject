@@ -1,13 +1,15 @@
 import React from 'react';
-import { HashRouter as Router, Route, Switch, NavLink } from 'react-router-dom';
-import logo from './img/planet.png'
+import {
+  HashRouter as Router, Route, Switch, NavLink,
+} from 'react-router-dom';
+import logo from './img/planet.png';
 import Missions from './components/Missions';
 import Rockets from './components/Rockets';
 import MyProfile from './components/MyProfile';
 import './App.css';
 import Styles from './components/header.module.scss';
 
-function App() {
+const App = function () {
   return (
     <Router>
       <header className="border-bottom">
@@ -47,6 +49,6 @@ function App() {
       </Switch>
     </Router>
   );
-}
+};
 
 export default App;

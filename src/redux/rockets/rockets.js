@@ -1,28 +1,27 @@
-/* eslint-disable no-case-declarations */
-const initState = [];
 const GET_ROCKETS = 'space/rockets/GET_ROCKETS';
 const RESERVE_ROCKET = 'space/rockets/RESERVE_ROCKET';
 const CANCEL_RESERVATION = 'space/rockets/CANCEL_RESERVATION';
 const GET_RESERVED_ROCKETS = 'space/rockets/GET_RESERVED_ROCKETS';
 
-const rocketsReducer = (state = initState, action) => {
-  switch (action.type) {
+const rocketsReducer = (state = [], { type, rockets, id } = {}) => {
+  switch (type) {
     case GET_ROCKETS:
-      return action.rockets;
-    case RESERVE_ROCKET:
+      return rockets;
+    case RESERVE_ROCKET: {
       const newSt = state.map((rocket) => {
-        console.log(rocket);
-        if (rocket.id !== action.id) return rocket;
+        if (rocket.id !== id) return rocket;
         return { ...rocket, reserved: true };
       });
       return newSt;
-    case CANCEL_RESERVATION:
+    }
+    case CANCEL_RESERVATION: {
       const afetrCancelState = state.map((rocket) => {
-        console.log(rocket);
-        if (rocket.id !== action.id) return rocket;
+        if (rocket.id !== id) return rocket;
+
         return { ...rocket, reserved: false };
       });
       return afetrCancelState;
+    }
     case GET_RESERVED_ROCKETS:
       return state.filter((rocket) => rocket.reserved);
     default: return state;
@@ -40,7 +39,7 @@ const getRockets = () => (dispatch) => {
   )
     .then((res) => res.json())
     .then(async (data) => {
-      const result = data
+      const result = data;
 
       Object.entries(result).forEach((rocket) => {
         const foo = rocket[1];
@@ -56,8 +55,8 @@ const getRockets = () => (dispatch) => {
       dispatch({
         type: GET_ROCKETS,
         rockets: rocketsBag,
-      })
-    })
+      });
+    });
 };
 
 const reserveRocket = (id) => ({

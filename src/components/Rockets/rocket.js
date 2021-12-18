@@ -3,9 +3,9 @@ import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import { reserveRocket, fooBar } from '../../redux/rockets/rockets';
 
-const Rocket = ({
+const Rocket = function ({
   id, name, description, image, reserve,
-}) => {
+}) {
   const dispatch = useDispatch();
 
   const reserveHandler = () => {

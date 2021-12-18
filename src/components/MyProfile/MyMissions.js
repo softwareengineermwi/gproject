@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 
-const MyMissions = () => {
+const MyMissions = function () {
   const myMissions = useSelector((state) => state.missions.filter((mission) => mission.joined));
   return (
     <div className="col-6">

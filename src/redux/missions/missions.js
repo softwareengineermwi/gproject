@@ -2,7 +2,6 @@ const TOGGLE_MESSION_JOIN = 'TOGGLE_MESSION_JOIN';
 const ADD_LIST_OF_MISSIONS_TO_STORE = 'ADD_LIST_OF_MISSIONS_TO_STORE';
 
 const url = 'https://api.spacexdata.com/v3/missions';
-const initialState = [];
 
 const toggleMissionJoin = (payload) => ({
   type: TOGGLE_MESSION_JOIN,
@@ -30,13 +29,13 @@ const getListOfMissions = () => (dispatch) => {
     });
 };
 
-const missionsReducer = (state = initialState, action) => {
-  switch (action.type) {
+const missionsReducer = (state = [], { type, payload } = {}) => {
+  switch (type) {
     case TOGGLE_MESSION_JOIN: return state.map((mission) => {
-      if (mission.id !== action.payload) return mission;
+      if (mission.id !== payload) return mission;
       return { ...mission, joined: !mission.joined };
     });
-    case ADD_LIST_OF_MISSIONS_TO_STORE: return action.payload;
+    case ADD_LIST_OF_MISSIONS_TO_STORE: return payload;
     default: return state;
   }
 };
@@ -44,5 +43,6 @@ const missionsReducer = (state = initialState, action) => {
 export {
   toggleMissionJoin,
   getListOfMissions,
-  missionsReducer as default,
 };
+
+export default missionsReducer;

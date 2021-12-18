@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { toggleMissionJoin } from '../../redux/missions/missions';
 import Styles from './mission.module.scss';
 
-const Mission = (props) => {
+const Mission = function (props) {
   const { missionInfo } = props;
   const dispatch = useDispatch();
 

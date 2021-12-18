@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 
 const filtrate = (item) => item.reserved === true;
-const MyRockets = () => {
+const MyRockets = function () {
   const t = useSelector((state) => state.rockets).filter(filtrate);
   return (
     <div className="col-6">
