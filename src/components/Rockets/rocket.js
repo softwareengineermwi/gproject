@@ -44,19 +44,19 @@ const Rocket = function ({
 };
 
 Rocket.propTypes = {
-  id: PropTypes.string,
+  id: PropTypes.number,
   name: PropTypes.string,
   description: PropTypes.string,
   image: PropTypes.string,
-  reserve: PropTypes.string,
+  reserve: PropTypes.bool,
 };
 
 Rocket.defaultProps = {
-  id: PropTypes.string,
+  id: PropTypes.number,
   name: PropTypes.string,
   description: PropTypes.string,
   image: PropTypes.string,
-  reserve: PropTypes.string,
+  reserve: PropTypes.bool,
 };
 
 export default Rocket;
