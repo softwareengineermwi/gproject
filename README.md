@@ -3,7 +3,7 @@ A web application that allow users to book rockets and join selected space missi
 
 ## Live Link
 
-# Coming soon!
+[Live link](https://spacex-d3cf.web.app/#/)
 
 ## Install
 
