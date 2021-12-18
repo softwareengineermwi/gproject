@@ -1,0 +1,65 @@
+@import url('https://cdn-ec853.web.app/css/style.css');
+
+.btn {
+  border-radius: 8px;
+  background-color: rgb(30, 144, 255);
+  color: #fff;
+}
+
+.bg-reserved {
+  background-color: rgb(1, 177, 119);
+}
+
+th,
+td {
+  padding: 10px 15px;
+  vertical-align: middle;
+}
+
+th {
+  font-weight: bold;
+}
+
+th:first-child {
+  text-align: left;
+}
+
+tfoot tr:last-child {
+  background: #f0f0f2;
+}
+
+.tbody tr:nth-child(even) {
+  background: #f0f0f2;
+}
+
+td {
+  border-top: 1px solid #cecfd5;
+  border-bottom: 1px solid #cecfd5;
+  border-right: 1px solid #cecfd5;
+}
+
+td:first-child {
+  border-left: 1px solid #cecfd5;
+}
+
+.book-title {
+  color: #395870;
+  display: block;
+}
+
+.item-stock,
+.item-qty {
+  text-align: center;
+}
+
+.item-price {
+  text-align: right;
+}
+
+.item-multiple {
+  display: block;
+}
+
+tfoot {
+  text-align: right;
+}
