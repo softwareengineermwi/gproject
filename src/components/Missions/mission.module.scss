@@ -1,3 +1,46 @@
+.missionsTable {
+  width: 90%;
+  margin: 50px auto;
+  border: 1px solid rgb(146, 142, 142);
+  border-collapse: collapse;
+  background-color: rgb(253, 253, 253);
+  opacity: 0.9;
+  box-shadow: 5px 5px 10px  rgb(148, 148, 145);
+
+  .headTable {
+    background-color: #a7a7a7;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+
+  td {
+    border: 3px solid #a7a7a7;
+    padding: 10px;
+  }
+
+  .loadingTable {
+    width: 100%;
+    min-height: 20rem;
+    margin-left: 145%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .loadingTd {
+    border: none;
+    width: 100%;
+    text-align: center;
+  }
+
+  .missionName {
+    width: 8rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+}
+
 @mixin badge ($color: DarkGray) {
   display: block;
   width: 8rem;

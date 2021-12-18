@@ -3,11 +3,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import Rocket from './rocket';
 import { getRockets } from '../../redux/rockets/rockets';
 
-const Rockets = () => {
-  const rockets = useSelector((state) => {
-    console.log(state);
-    return state.rockets;
-  });
+const Rockets = function () {
+  const rockets = useSelector((state) => state.rockets);
 
   const dispatch = useDispatch();
 

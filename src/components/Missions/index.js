@@ -4,7 +4,7 @@ import Mission from './Mission';
 import { getListOfMissions } from '../../redux/missions/missions';
 import Styles from './mission.module.scss';
 
-const Missions = () => {
+const Missions = function () {
   const missions = useSelector((state) => state.missions);
   const dispatch = useDispatch();
 
